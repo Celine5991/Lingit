@@ -4,6 +4,7 @@ For studying.
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!DOCTYPE 	html>
 <html>
 <head>
@@ -33,6 +34,8 @@ width: 100%;height: 100vw;}
 </div>
 </body>
 </html>
+=======
+>>>>>>> b9009afce7e71d1c0f032687ff81f4fae4018069
 =======
 >>>>>>> b9009afce7e71d1c0f032687ff81f4fae4018069
 =======
