@@ -2,26 +2,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>任务二</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximun-scale=1,user-scalable=no"/>
+	<title>task3</title>
+<link rel="stylesheet" type="text/css" href="screen">
 <style type="text/css">
-
     body{background-color: #68cdd5;width: 100%;}
 	#A{height: 50px;
 		width: 50px;
 	   }
-	#PTT{margin-top: 50px;
+	#PTT{display: block;
+		margin: 0 auto;
 		margin-bottom: 50px;
-		margin-left: 35%; }
+		transform: scale(0.9,0.9); }
 	#B{width: 80%;
-	   margin-left: 10%;}
+	   margin-left: 10%;
+	   margin-top: 50px;}
 	[center]{text-align: center;}
 	p{color: white;font-size: 1em ;font-family: "Microsoft YaHei UI"}
-	#C div{margin-top: 100px;
+	#C div{margin-top: 120px;
 	       float: left;}
 	#left{margin-left: 10%;
 	      width: 20%}
 	#right{margin-left: 40%;}
+	@media screen and (height:765px){#C{margin-top: 150px;}#B{margin-top: 50px}}
+	@media screen and (height: 956px){#C{margin-top: 200px}#B{margin-top: 100px}}
 </style>
 </head>
 <body>
@@ -30,7 +35,7 @@
 </div>
 <div id="B"><!--主题部分-->
 	<img id="PTT" src="imge\2.png">
-	 <p class="log" align="center">一个可以玩杀人游戏的地方，一个可以玩多人扫雷的地方，一个可以以静静带着的地方，你可以。</p>
+	 <p class="log" align="center">葡萄藤轻游戏专注于桌面领域，提供在线杀人游戏，捉鬼，炸狼堡等多种聚会游戏，以线下聚会桌游道具为主。</p>
 </div>
 <div id="C"><!--两个图标-->
     <div id="left" align="center">
