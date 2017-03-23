@@ -8,42 +8,41 @@
 <link rel="stylesheet" type="text/css" href="screen">
 <style type="text/css">
     body{background-color: #68cdd5;width: 100%;}
-	#A{height: 50px;
+	p.back{height: 50px;
 		width: 50px;
 	   }
-	#PTT{display: block;
+	img.PTT{display: block;
 		margin: 0 auto;
 		margin-bottom: 50px;
 		transform: scale(0.9,0.9); }
-	#B{width: 80%;
+	div.box{width: 80%;
 	   margin-left: 10%;
 	   margin-top: 50px;}
 	[center]{text-align: center;}
 	p{color: white;font-size: 1em ;font-family: "Microsoft YaHei UI"}
-	#C div{margin-top: 120px;
-	       float: left;}
-	#left{margin-left: 10%;
-	      width: 20%}
-	#right{margin-left: 40%;}
-	@media screen and (height:765px){#C{margin-top: 150px;}#B{margin-top: 50px}}
-	@media screen and (height: 956px){#C{margin-top: 200px}#B{margin-top: 100px}}
+	div.boxx{margin-top: 180px;
+	       text-align: center;width: 100%;}
+	div.left{float: left;display: block;margin: 0 auto;margin-left: 8%;width: 10%;}
+	div.right{float: left;margin-left: 55%;width: 10%; }
+	@media screen and (height:765px){div.boxx{margin-top: 300px;}div.box{margin-top: 100px}}
+	@media screen and (height: 956px){div.boxx{margin-top: 400px}div.box{margin-top: 200px}}
 </style>
 </head>
 <body>
-<div id="A"><!--箭头-->
-	<img src="imge\1.png">
-</div>
-<div id="B"><!--主题部分-->
-	<img id="PTT" src="imge\2.png">
+<p class="back"><!--箭头-->
+	<img src="imge/1.png">
+<p>
+<div class="box"><!--主题部分-->
+	<img class="PTT" src="imge/2.png">
 	 <p class="log" align="center">葡萄藤轻游戏专注于桌面领域，提供在线杀人游戏，捉鬼，炸狼堡等多种聚会游戏，以线下聚会桌游道具为主。</p>
 </div>
-<div id="C"><!--两个图标-->
-    <div id="left" align="center">
-    <img src="imge\3.png">
-	<p>290560933</p>
+<div class="boxx" align="center"><!--两个图标-->
+    <div class="left" >
+    <img  src="imge/3.png">
+	<p align="center">290560933</p>
 	</div>
-	<div id="right" align="center">
-	<img src="imge\4.png">
+	<div class="right" align="center">
+	<img src="imge/4.png">
     <p>BJPTTeng</p>
     </div>
 </div>
