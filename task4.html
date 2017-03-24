@@ -2,11 +2,14 @@
 <html>
 <head>
 	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maxmun-scale=1,user-scalable=no"/>
 	<style type="text/css">
+
 		/*--宏观的样式--*/
 		body,button.none{;background-color: #eff0f4;}
 	    p{color: white;
-		  font-size: 3em;
+		  font-size: 1.3em;
 		  font-family: "Microsoft YaHei UI"}
 		div.header,button.blue{background-color: #5fc0cd;} 
 		div.header,form div,button.blue{width: 100%} 
@@ -15,36 +18,38 @@
 	    *{margin: 0;padding: 0;} 
 		/*--header的样式--*/
 		div.header{
-		height: 120px;
-	    margin-bottom: 20px;}
+		height: 60px;
+	    margin-bottom: 6px;}
 		div.header p{
-			         margin-top: 30px;}
-	    p.left{float: left;margin-left:20px;}
+			         margin-top: 15px;}
+	    p.left{float: left;margin-left:15px;}
 		p.middle{float:left;
 			     position:absolute;right: 45%; }
-		p.right{float: right;margin-right: 20px;}
+		p.right{float: right;margin-right: 15px;}
 		/*--输入栏的样式--*/
         form div{
-        	height: 120px;
+        	height: 60px;
             background-color: white;}
         /*--图样的样式--*/
-        img.pic{transform: scale(1.2,1.2);
-            position: relative;left: 45px;top:25px;} 
-        img.line{position: relative;left: 80px;top: 30px;} 
+        img{transform: scale(0.8,0.8)}
+        img.pic{;
+            position: relative;left: 20px;;} 
+        img.line{position: relative;left: 40px;top: 5px;} 
         /*--输入的样式--*/
-        input{margin-left: 80px;
-        	height: 80px;
-        	width: 80%;
-            position: relative;top: 20px;} 
+        input{margin-left: 50px;
+        	height: 40px;
+        	width: 60%;
+            position: relative;top: -15px;} 
         /*--登录按钮的样式--*/
         button.blue{
-            margin-top: 80px;
-            height: 140px }
+            margin-top: 40px;
+            height: 65px }
         /*--忘记密码？--*/
         button.none{float: right;
             margin-right: 20px;
-            margin-top: 10px;}
-        p.blue{color:#5fc0cd; }
+            margin-top: 5px;}
+        p.blue{color:#5fc0cd;
+        text-decoration: underline; }
         
         
 
@@ -63,13 +68,13 @@
 	<div>
 	<img  class="pic" src="imge\task4\iphone.png">
 	<img  class="line" src="imge\task4\line.png">
-		<input type="text" name="tel" style="font-size: 40px;" placeholder="    请输入手机号">
+		<input type="text" name="tel" style="font-size: 20px;" placeholder="    请输入手机号">
 	</div>
 	<br />
 	<div>
 	<img class="pic" src="imge\task4\locked.png">
 	<img  class="line" src="imge\task4\line.png">
-	<input type="password" border="none" name="passwd" style="font-size: 40px" placeholder="    请输入密码">	
+	<input type="password" border="none" name="passwd" style="font-size: 20px" placeholder="    请输入密码">	
 	</div>
 </form>
 
