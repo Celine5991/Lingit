@@ -8,22 +8,27 @@
 <link rel="stylesheet" type="text/css" href="screen">
 <style type="text/css">
     body{background-color: #68cdd5;width: 100%;}
+    *{margin: 0;padding: 0}
 	p.back{height: 50px;
 		width: 50px;
+		padding-top: 10px;
+		padding-left: 10px;
 	   }
 	img.PTT{display: block;
 		margin: 0 auto;
 		margin-bottom: 50px;
 		transform: scale(0.9,0.9); }
 	div.box{width: 80%;
-	   margin-left: 10%;
+	   margin-left: 8%;
 	   margin-top: 50px;}
 	[center]{text-align: center;}
 	p{color: white;font-size: 1em ;font-family: "Microsoft YaHei UI"}
-	div.boxx{margin-top: 180px;
-	       text-align: center;width: 100%;}
-	div.left{float: left;display: block;margin: 0 auto;margin-left: 8%;width: 10%;}
-	div.right{float: left;margin-left: 55%;width: 10%; }
+	div.boxx{margin-top: 180px;width: 100%;
+		display: flex;justify-content: space-between;}
+	div.left{padding-left: 8%}
+	div.right{padding-right: 10%}
+
+	
 	@media screen and (height:765px){div.boxx{margin-top: 300px;}div.box{margin-top: 100px}}
 	@media screen and (height: 956px){div.boxx{margin-top: 400px}div.box{margin-top: 200px}}
 </style>
