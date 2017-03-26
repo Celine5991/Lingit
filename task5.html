@@ -72,12 +72,12 @@
 		/*--content--*/
 		div.conten,{width: 100%;
 		}
-		div.content div{width: 90%;
-            height: 25px;
+		div.content div,div.self{width: 90%; 
             padding-top: 20px;
             padding-bottom: 10px;
             margin-left: 20px;
 			border-bottom: 1px solid #e1e5e7}
+		div.content div{height: 25px;}
         p.content{width: 80px;
         	height: 16px;
         	border-left:2px solid #5fc0cd; 
@@ -102,11 +102,13 @@
         }
         p.black,p.red,p.small{float: left;
         	margin-left: 10px;}
-        p.small{font-size: 0.81em;
+        p.red{color: #e26163}
+		p.small{font-size: 0.81em;
         	width: 68%;
-        	position: relative;top: -7px;}	
-        p.red{color: #e26163}	
-		
+        }
+        div.self{display: flex;
+        	align-items: center;}
+        div.self p{margin-bottom: 15px;}
 	</style>
 </head>
 <body>
@@ -154,12 +156,11 @@
     	<p class="grey">服务价格</p>
     	<p class="red">25元/小时</p>
     </div>
-    <div class="selt">
+</div>
+<div class="self">
     	<p class="grey">自我介绍</p>
     	<p class="small">可以洗衣、做饭、照顾老人。在护工方面有5年的经验，经验丰富。</p>
-    </div>
 </div>
-
 
 <footer>
 	<div>
