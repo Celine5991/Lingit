@@ -52,22 +52,6 @@
 		footer p{font-size: 0.9em;}
 		div.home p{color: #55a8b3;}
 		footer button{background-color:#f8fafb }
-		/*--listhead--*/
-		div.listhead{height: 45px;
-			width: 100%;
-			display: flex;justify-content: space-around;
-			border-bottom: 1px solid #e1e5e7;}
-		div.listhead button{border-right: 1px solid  #e1e5e7;
-			display:flex;align-items: center;
-			justify-content: space-between;
-			background-color:white;
-			width: 33.3%}
-		div.listhead img{width: 5px;height: 5px;
-			margin-right: 10px;}
-		div.listhead p{font-size: 1.1em;
-		    margin-left: 20px;
-		    text-align: center;
-		    width: 55%}
 		/*--list--*/
 		div.list{width: 100%;
 			height: 435px;
@@ -92,9 +76,32 @@
 		div.list{font-size: 0.8em;}
 		div.more{display: flex;justify-content: center;}
 		div.more button{background-color: white;
-			padding-right: 10px;
-		}
+			padding-right: 10px;}
+		/*--下拉选框--*/
+		ul,li{list-style: none;}
+		ul.nav li a{display: block;}
+		ul.nav li ul{position: absolute;display: none;}
+		ul.nav li:hover ul{display: block;}
+		/*--listhead--*/
+		ul.nav{height: 45px;
+			width: 100%;
+			display: flex;justify-content: space-between;
+			border-bottom: 1px solid #e1e5e7;}
 
+		ul.nav img{width: 5px;height: 5px;
+			float: right;
+			padding-top: 5px;padding-right: 5px;}
+		li.first{border-right: 1px solid #e2eaec;
+		    width: 33.3%;
+		    text-align: center;
+		    padding-top: 13px;}
+		a{height: 45px;text-decoration: none;
+			color:#999999;}
+		li{	font-size: 1em;
+			color:#999999;}
+		ul.second{width: 33.3%;text-align: center;
+			height: 30px;border:2px solid #e2eaec;
+			box-shadow: 2px}	
 
 
 	</style>
@@ -114,21 +121,34 @@
 		<img src="imge\locall.png">
 	</button>
 </header>
-<div class="listhead">
-	<button>
-		<p>所在地</p>
-		<img src="imge\triangle.png">
-	</button>
-	<button>
-		<p>&emsp;食宿</p>
-		<img src="imge\triangle.png">
-	</button>
-    <button>
-		<p>病人情况</p>
-		<img src="imge\triangle.png">
-	</button>
-</div>
-</div>
+<ul class="nav">
+		<li class="first">
+		<a herf="#">所在地<img src="imge\triangle.png"></a>
+		    <ul class="second">
+		    	<li><a href="#">广州</a></li>
+		    	<li><a href="#">深圳</a></li>
+		     	<li><a href="#">上海</a></li>
+		    </ul>
+		</li>
+		<li class="first">
+		<a herf="#">食宿<img src="imge\triangle.png"></a>
+		    <ul class="second">
+		    	<li><a href="#">不包</a></li>
+		    	<li><a href="#">包吃</a></li>
+		     	<li><a href="#">包住</a></li>
+		     	<li><a href="#">包吃住</a></li>
+		    </ul>
+		</li>
+		<li class="first">
+		<a herf="#">病人情况<img src="imge\triangle.png"></a>
+		    <ul class="second">
+		    	<li><a href="#">轻微</a></li>
+		    	<li><a href="#">一般</a></li>
+		     	<li><a href="#">严重</a></li>
+		    </ul>
+		</li>
+</ul>
+
 
 <div class="list">
 	<div class="littlel">
