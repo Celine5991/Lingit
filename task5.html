@@ -9,7 +9,7 @@
 	    *{margin: 0;padding: 0}
 	    button{border: 0;
 	    	background-color: white}
-	    p{font-family: '黑体'}
+	    p{font-family: '黑体';}
 		/*--header--*/
 		header{height: 40px;
 		       background-color: #5fc0cd;
@@ -20,9 +20,8 @@
 			float: left;
 			background-color: #5fc0cd}
 		header button{background-color:#5fc0cd;}
-		p.middle{float: right;
-			margin-right: 40%;
-			margin-top: 10px;
+		p.middle{display: flex;justify-content: center;
+			margin-top: -32px;
 		    color: white;}
 		/*--footer--*/
 		footer div{position: fixed;bottom: 0;
@@ -66,7 +65,7 @@
 		div.infbox p{color:white;}
 		p.old{font-size: 0.95em;
 			padding-left: 5px}
-		div.add p{font-size: 0.6em;}
+		div.add p{font-size: 0.6em;white-space: nowrap;}
 		div.add img{transform: scale(0.5,0.5);
 		}
 		/*--content--*/
