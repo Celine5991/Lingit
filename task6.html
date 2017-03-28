@@ -56,8 +56,8 @@
 		div.list{width: 100%;
 			height: 435px;
 			overflow-x: hidden;
-			overflow: scroll;
-			position: fixed;top: 95px;}
+			overflow-y: auto;
+			position: absolute;top: 95px;z-index: -1;}
 		@media screen and (height:766px){div.list{height: 620px;}}
 		div.littlel{width: 100%;
 			height: 80px;
@@ -90,7 +90,8 @@
 		ul.nav{height: 45px;
 			width: 100%;
 			display: flex;justify-content: space-between;
-			border-bottom: 1px solid #e1e5e7;}
+			border-bottom: 1px solid #e1e5e7;
+			position: absolute;left: 0;top: 50px;z-index: 1}/*堆叠-*/
         ul.nav img{width: 5px;height: 5px;
 			float: right;
 			padding-top: 5px;padding-right: 5px;}
@@ -104,10 +105,11 @@
 			border-bottom:1px solid #e2eaec;
 			height: 24px;}
 		ul.second li a{margin-top: 5px;}
-		ul.second{width: 33.3%;text-align: center;
+		ul.second{width: 33.2%;text-align: center;
 			height: 119px;margin-top: 14px;
 		    border:1px solid #e2eaec;
-		    box-shadow: #666 0px 0px 2px;}
+		    box-shadow: #666 0px 0px 2px;
+		    background-color: white;}
 	</style>
 </head>
 <body>
