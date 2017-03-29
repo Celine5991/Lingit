@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task7-1</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximun-scale=1.0,urser-scalable=no"/>
+	<link rel="stylesheet" type="text/css" href="C:\Users\LaoPopo\Desktop\bootstrap-3.3.7-dist\css\bootstrap.min.css">
+
+	 <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+      <!-- 注意： 如果通过 file://入Respond.js,文件，则该文件无法起效果 -->
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+
+      <style type="text/css">
+      /*--nomal--*/
+      button{margin:0;}
+      body{background-color: #f0f0f0;}
+      *{margin:0;font-family: '宋体'}
+      /*--header--*/
+      header{background-color: #29bde0;
+      	height: 45px;
+      	width: 100%;}
+      button.btn{background-color: #29bde0;
+      	margin-top: 8px;}
+      header img{width: 20px;height: 15px;}
+
+      /*--内容--*/
+      div.conten{
+      	width:100%;}
+      /*--top--*/
+      div.main,button.top{
+      	color: #9a9a9a;
+      	width: 90%;
+      	background-color: white;
+      	border:1px solid #c9c9c9;
+      	font-size: 1.3em;}
+      button.top{height: 65px;
+      	margin: 10px 0px;}
+      button.top img{width: 13px;
+      	position: fixed;right: 8%;top: 75px;}
+      button.top p{padding-top: 5px;}
+      /*--main--*/
+      p.top{color: #ffcc33;
+      	border-bottom: 1px solid #ffcc33;
+      	padding:10px 0px 10px 0px; 
+        width: 100%;
+        display: flex;justify-content: center;
+        font-size: 1.2em;}
+      div.main button{width: 75%;
+      	background-color: #69d1e9;
+      	height: 75px;
+      	border:none;
+      	color: white;}
+      	div.mcontent,div.content{display: flex;flex-direction: column;align-items: center;} 
+      	div.mcontent p{padding-top: 10px;} 
+      	button.more{width: 20px;
+      		height: 30px;
+      		position: fixed;right: 8%;top: 332px;
+      		background-color: white;
+      		border:none;}
+      	button.more img{width: 15px;}
+      	/*--dot--*/
+      	div.dot div{width: 10px;
+      		height: 10px;
+      		border-radius: 5px;}
+        div.dot{display: flex;flex-direction: row;justify-content: space-around;
+        	width: 50px;
+        	padding-bottom: 10px;
+        }
+        div.grey{background-color: #f0f0f0}
+
+        div.blue{background-color:  #69d1e9;}
+
+      	
+
+      </style>
+</head>
+<body>
+<header>
+    <button class="btn">
+	<img src="imge\menu.png">
+	</button>
+</header>
+<div class="content">
+    <button class="top"> 
+        <p>上次游戏：捉鬼猜词版</p>
+        <img src="imge\Back _ Icon.png">
+    </button>
+    <div class="main">
+        <p class="top" style="">捉鬼游戏</p>
+        <div class="mcontent">
+            <button>
+                <p>简化版</p>
+            </button>
+            <p class="small">有1133个用户正在玩此款游戏</p>
+            <button>
+                <p>猜词版</p>
+            </button>
+            <p class="small">有1133个用户正在玩此款游戏</p>
+            <button>
+                <p>白痴版</p>
+            </button>
+                <p class="small">有1133个用户正在玩此款游戏</p>
+            <div class="dot">
+                <div class="blue"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+                <div class="grey"></div>
+            </div>
+        </div>
+        
+    </div>
+    <button class="more">
+        <img class="more" src="imge\more1.png">
+    </button>
+    
+</div>
+
+
+
+</body>
+</html>
