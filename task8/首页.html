@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>首页</title>
+	<meta charset="utf-8">
+	<meta name="veiwport" content="width=device-width,initail-scale=1.0,maximun-scale=1.0,user-scalabe=no"/>
+	<link rel="stylesheet" type="text/css" href="screen">
+    <link rel="stylesheet" type="text/css" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+      <!-- 注意： 如果通过 file://入Respond.js,文件，则该文件无法起效果 -->
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+  <style type="text/css">
+  /*--nomal--*/
+  body{background-color: #fafafa;
+    font-family: '黑体';text-align: center;}
+  button{background:transparent;border: none; }
+  .second,.third h5{margin-top: 90px;}
+  /*--Top--*/
+  .Top{color: #29b078;width: 100%;
+    display: flex;justify-content: space-between;
+    padding-top: 5px;background-color: white;}
+  .Top p{margin-left: 20%;}  
+  .Top span{margin-right: 20%;}
+  .Top img{margin-left: 8px;}
+  /*--navigaiton--*/
+  .navigation{background-color: #29b078;
+    padding-top:20px;padding-bottom: 50px;}
+  .right{margin-right: 20%;}
+  .navigation a{float: right;margin-left: 27px;padding-bottom: 19px;text-decoration: none;
+    font-size: 2rem;}
+  a:link,a:visited{color: white;}
+  .navigation a:hover{border-bottom: 1px solid white;}
+  /*--bigbackground--*/
+  .carousel a{margin: 0;width: 20%;}
+  .carousel a img{vertical-align: middle;}
+  /*--content--*/
+  .content{width: 70%;margin-left: 15%;}
+  /*--first--*/
+  .first{display: flex;flex-direction: row;justify-content: space-between;margin-top: 12%;width: 100%;}
+  h5{font-weight: bolder;padding-bottom: 5px;padding-top: 5px;}
+  .small{color: #999999}
+  .point{border-right: 1px dashed #dedede;
+    width: 80%;
+    display: flex;flex-direction: row;justify-content: space-between;align-items: flex-start;}
+  .point div{text-align: center;width: 25%;}
+  .point .midle{padding-top: 10px;}
+  .point p{text-align: justify;}
+  .point img{transform: scale(0.8,0.8);}
+  .point .right{margin-right: 5%;}
+  .menber{width: 20%;display: flex;flex-direction: column;margin-left: 5%;padding-top: 50px;}
+  .menber span{color: #26a26f;padding-bottom: 10px;}
+  /*--second--*/
+  .second{padding-bottom: 10px;}
+  .second .con{width: 112%;
+    background-image: url('imge/sprite.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: bottom left;margin-left: -20px;
+    padding-right: }
+  div.row{display: flex;flex-direction: row;justify-content: space-between;width: 100%;margin:0;}
+  .con .top{margin-bottom: 84px;padding-top: 60px;}
+  .row p{width: 13%;font-family: '黑体';text-align: justify;}
+  p.one{margin-left: -5rem;}
+  p.two{margin-left: 1rem}
+  p.three{margin-left: 1rem;}
+  p.four{width: 10%;}
+  /*--third--*/
+  .third .con{display: flex;justify-content: space-between;}
+  .third p{text-align: justify;margin: 10px 20px 20px 20px;}
+  .third .con div{width: 20%;margin-top: 60px;
+    margin-left: 1px;margin-bottom: 1px;margin-right: 1px;
+    background-color: white;box-shadow: 0px 0px 3px #adadad;}
+  .third img{margin-bottom: -70px;width: 85px;
+    margin-top: 15px;}
+  .third .carousel-indicators .active{background-color: #29b078}
+  .third .carousel-indicators li{background-color: white;
+    box-shadow: 0px 0px 1px #adadad;}
+  .third .carousel-indicators{position: absolute;bottom: -55px;}
+  /*--forth--*/
+  .forth h5{margin-top: 130px;margin-bottom: 60px;}
+  .forth .con{height: 140px;
+    margin-bottom: 50px;
+    display: flex;flex-direction: row;
+    background-image: url('imge/战略合作.png');
+    background-size:100%;background-repeat: no-repeat;}
+  .forth .con div{width: 20%;}
+  .middle{box-shadow: 0px 0px 3px #adadad}
+  .forth .con div:hover{box-shadow: 0px 0px 3px #adadad}
+  /*--footer--*/
+  footer{width: 100%}
+  footer .top{background-color: white;margin-bottom: 20px;padding-top: 10px;}
+  footer .top div{width: 70%;margin-left: 15%;display: flex;justify-content: space-between;flex-direction: row;margin-top: 10px;}
+  footer .top a{color: #999999;}
+  footer a:hover{text-decoration: underline;}
+  .bottom{background-color: #26a26f;font-size: 105%;font-family: }
+  .Big{display: flex;justify-content: space-between;text-align: left;
+    width: 70%;margin-left: 15%;
+    padding-top: 20px;padding-bottom: 20px;}
+  .bottom .big{display: flex;flex-direction: column;justify-content: space-around;} 
+  .bottom p{color: white;}
+  .bottom .right{border-right: 1px solid white;margin-right: 5px;}
+  .bottom .bottom{margin-top: -10px;}
+  .bottom .midlle{margin-left: -20%;}
+  </style>
+
+</head>
+<body>
+<div class="Top">
+	<p>客服热线：010-594-78634</p>
+	<span>
+		<a href="#"><img src="imge\wechat.png"></a>
+		<a href="#"><img src="imge\qq.png"></a>
+		<a href="#"><img src="imge\sina.png"></a>
+	</span>
+</div>
+<div class="navigation"><!--导航-->
+    <a class="right" href="关于.html">关于</a>
+    <a href="职业.html">职业</a>
+    <a href="推荐.html">推荐</a>
+    <a href="首页.html">首页</a>
+</div>
+<div id="myCarousel" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="imge\bigbg.png" alt="First slide">
+    </div>  
+    <div class="item">
+      <img src="" alt="Second slide">
+    </div>
+    <div class="item">
+      <img src="imge\bigbg,png" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev"></a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next"></a>
+</div>
+<div class="content"><!--body-->
+  <div class="first"><!--第一行-->
+    <div class="point"><!--第一行的左边块-->
+      <div>
+        <img src="imge\rocket.png">
+        <h5>高效</h5>
+        <p class="small">将五年到七年的成长时间，缩短到一年到三年</p> 
+      </div>    
+      <div class="midle" >
+        <img src="imge\archive.png">
+        <h5>规范</h5>
+        <p class="small">标准的实战教程，不会走弯路</p>
+      </div> 
+      <div class="right">
+        <img src="imge\person.png">
+        <h5>人脉</h5>
+        <p class="small">同伴好友，同院学长，技术大师，入学就混入职脉圈，为以后铺平通路。</p>
+      </div>
+    </div>
+    <div class="menber"><!--第一行的右边-->
+      <div>
+        <span class="glyphicon glyphicon-user small"> 12400</span>
+        <p class="small">累计在线学习人数</p>
+      </div>
+      <div>
+        <span class="glyphicon glyphicon-user small"> 12400</span>
+        <p class="small">学员已经找到满意工作</p>
+      </div>
+    </div>
+  </div>
+  <div class="second"><!--第二行-->
+    <h5>如何学习</h5>
+    <div class="con">
+    <div class="row top">
+      <p class="small one">匹配你现在的个人情况寻找适合自己的岗位</p>
+      <p class="small two">了解职业前景薪金待遇、竞争压力等</p>
+      <p class="small three">掌握行业内顶级技能</p>
+      <p class="small four">查看职业目标任务</p>
+    </div>
+    <div class="row">  
+      <p class="small one">参考学习资源，掌握技能点，逐个完成任务</p>
+      <p class="small two">加入班级，和小伙伴们互相互助，一块学习</p>
+      <p class="small three">选择导师，一路引导，加速自己成长</p>
+      <p class="small four">完成职业技能，升级业界大牛</p>
+    </div>
+    </div>
+  </div>
+  <div class="third"><!--第三行-->
+    <h5>优秀学员展示</h5>
+  <div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+       <div class="con">
+         <div>
+        <img src="imge\Avatar.png">
+        <h5>技术顾问：罗大佑</h5>
+        <p class="small">百度技术总监：互联网基础服务领域，从事虚拟主机、与服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+         </div>
+         <div>
+        <img src="imge\Avatar1.png">
+        <h5>技术顾问：罗大佑</h5>
+        <p class="small">百度技术总监：互联网基础服务领域，从事虚拟主机、与服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+         </div>
+         <div>
+        <img src="imge\Avatar2.png">
+        <h5>技术顾问：罗大佑</h5>
+        <p class="small">百度技术总监：互联网基础服务领域，从事虚拟主机、与服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+         </div>
+         <div>
+        <img src="imge\Avatar3.png">
+        <h5>技术顾问：罗大佑</h5>
+        <p class="small">百度技术总监：互联网基础服务领域，从事虚拟主机、与服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+         </div>
+         </div>  
+       </div>
+      </div>
+    </div>
+  </div>
+  <div class="forth"><!--第四行-->
+    <h5>战略合作企业</h5>
+    <div class="con">
+      <div></div>
+      <div></div>
+      <div class="middle"></div>
+      <div></div>
+      <div></div>
+    </div>   
+  </div>
+</div>
+<footer>
+  <div class="top">
+    <h5>友情链接</h5>
+    <div>
+      <a href="#">·手机软件</a>
+      <a href="#">·教师招聘</a>
+      <a href="#">·找工作</a>
+      <a href="#">·教师招聘</a>
+      <a href="#">·找工作</a>
+      <a href="#">·手机软件</a>
+      <a href="#">·教师招聘</a>
+      <a href="#">·手机软件</a>      
+      <a href="#">·手机软件</a>
+      <a href="#">·找工作</a>
+    </div>
+    <div>
+      <a href="#">·手机软件</a>
+      <a href="#">·教师招聘</a>
+      <a href="#">·找工作</a>
+      <a href="#">·教师招聘</a>
+      <a href="#">·找工作</a>
+      <a href="#">·手机软件</a>
+      <a href="#">·教师招聘</a>
+      <a href="#">·手机软件</a>      
+      <a href="#">·手机软件</a>
+      <a href="#">·找工作</a>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="Big">
+     <div class="big">
+      <a href="#">技能树-改变你我</a>
+      <div>
+        <a class="right" href="#">关于我们 </a>
+        <a class="right" href="#">联系我们 </a>
+        <a href="#">合作企业</a>
+      </div>
+     </div>
+     <div class="big midlle">
+      <a href="#">旗下网站</a>
+      <div>
+        <a href="#">草船云孵化器</a>
+        <a href="#">最强IT特训营</a>
+      </div>
+      <div class="bottom">
+        <a href="#">葡萄藤轻游戏</a>
+        <a href="#">桌游精灵</a>
+      </div>
+     </div>
+     <div class="big">
+      <p>微信公众平台</p>
+      <img src="imge\code.png">
+     </div>
+    </div>
+    <p class="small">Copyright@2015技能树 www.jishu.com All Right Reserved |京ICP备13005880号</p>  
+</div>
+
+  </div>
+</footer>
+
+    
+</div>
+</body>
+</html>
