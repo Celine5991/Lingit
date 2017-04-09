@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>首页</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="imge/修真院.ico">
+	<link rel="stylesheet" type="text/css" href="screen">
+    <link rel="stylesheet" type="text/css" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+      <!-- 注意： 如果通过 file://入Respond.js,文件，则该文件无法起效果 -->
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+    <style type="text/css">
+    /*--nomal--*/
+    body{background-color:#fafafa;font-family: '黑体';}
+    .container{width: 100%;}
+    .row{margin: 0}
+    /*--header--*/
+    header .white{padding: 3px 0;color: #29b078;background-color: white}
+    header .white a{float: right;margin-left: 2%;}
+    @media (max-width: 768px){header img{width: 0}.row .white{color: white}}
+    @media (max-width: 1200px){header .white .white{padding-left: 2%;}header .white a.right{margin-right: 4%;}}
+    header .navbar-default{background-color: #29b078;border:none;}
+    header .navbar-default .navbar-nav>li>a{color: white;border-bottom: 3px solid #29b078}
+    header .navbar-default .navbar-nav>li>a:hover{color: white;border-bottom: 3px solid white}
+    .nav{background-color: #29b078;padding-left: 10%;}
+    header .navbar{margin:0;padding-right: 4%}
+    .container-fluid{padding: 0;}
+    @media (max-width: 768px){.container-fluid{margin: 0}}
+    .xs{position: absolute;top: 8px;z-index: -1;width: 100%;}
+    .xs a{color: #29b078}
+    @media (max-width: 786px){.xs{z-index: 1}}
+    /*--内容--*/
+    .content .first div{text-align: center;margin-top: 8%;}
+    .content h5{font-weight: bold;text-align: center;}
+    .small{color: #999999}
+    .glyphicon{color:#29b078;}
+    .menber{border-left: 1px dashed #dedede;}
+    .menber div{text-align: left;margin-left: 20px;}
+    @media (max-width: 1200px) and (min-width: 768px){.menber{border: none;display: flex;justify-content: center;}}
+    @media (max-width: 768px){.menber div{text-align: center;}.menber{border: none;}.first img{transform: scale(0.8,0.8);}}
+    .second div h5{color:#29b078;width: 50px;padding: 17px; background-color: white;border-radius: 25px;box-shadow: 0px 0px 1px #ecebeb;}
+    h5.h5{text-align: center;margin-top: 5%;font-weight: bold}
+    .second p{width: 50%;margin:2px 2px;}
+    .second div{display: flex;align-items: center;justify-content: space-between;margin: 2% 0}
+    @media (max-width: 1200px){.second div{justify-content: space-around;}}
+    @media (max-width: 768px){.second div{font-size: 1.5rem;text-align: center;}}
+    .second img,.third img{transform: scale(0.8,0.8);}
+    .con div div{background-color: white;box-shadow: 0px 0px 1px #adadad;text-align: center;margin: 10px;width: 205px}
+    .con img,.con h5{margin-top: 5px;}
+    .con  p{margin:10px 20px 0 20px;padding-bottom: 20px;text-align: justify;}
+    .con h5{font-weight: bold;}
+    .third{margin-top: 5%}
+    .third .col-md-3{display:flex;justify-content: center; }
+    .third .carousel-indicators .active{background-color: #29b078}
+    p.col-lg-2{margin-right: -1%}
+    .third .carousel-indicators li{background-color: white;
+        box-shadow: 0px 0px 1px #adadad;}
+    .third .carousel-indicators{position: absolute;bottom: -33px;}
+    .forth{margin-bottom: 5%;}
+    .forth div{display: flex;justify-content:  center;align-items: center;}
+    .forth img{width: 178px;margin-top: 50px;margin-right: 1px;}
+    .forth img:hover{box-shadow:0px 0px 1px #adadad;}
+    img.active{box-shadow:0px 0px 3px #adadad;}
+    @media (max-width: 768px){.forth div{display: flex;flex-direction: column;align-items: center;}}
+    @media (min-width: 1200px){.forth div{margin-left: -2%;}}
+    .fifth{background-color: white;padding-bottom: 20px;}
+    .fifth div div{display: flex;flex-direction: column;}
+    .fifth div{display: flex;flex-direction: row;justify-content: space-around;padding: 0}
+    .fifth a{padding-top: 10px;}
+    .fifth h5{margin-top: 20px;}
+    @media (max-width: 768px){.fifth div{flex-direction: column;}.fifth a{margin-left: 43%;}}
+    @media  (max-width: 321px){.fifth a{margin-left: 10%}}
+    .fifth a{color: #999999;border-bottom: 1px solid white;}
+    .fith a:hover{border-bottom: 1px solid #26a26f}
+    /*--footer--*/
+    footer{background-color: #26a26f;color: white}
+    footer a{color: white;border-bottom: 1px solid #26a26f}
+    footer a:hover{border-bottom: 1px solid white;color: white}
+    footer .row{margin-top: 20px;}
+    footer p{font-size: 1rem;margin: 0;text-align: center;}
+    @media (max-width: 768px){.code{text-align: center;}}
+    </style>
+</head>
+<body>
+<!--页眉-->
+<header>
+	<div class="container-fluid">
+	    <div class="row white">
+		    <div class="col-lg-2 col-md-0 col-sm-0 col-xs-0"></div>
+		    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 white">    客服热线：010-594-78634
+		        <span>
+			        <a class="right" href="#"><img src="imge\sina.png"></a>
+		            <a href="#"><img src="imge\qq.png"></a>
+			        <a  href="#"><img src="imge\wechat.png"></a>
+		        </span>
+     		</div>
+     		<div class="col-lg-0 col-md-0 col-sm-0 col-xs-12 xs">
+     			<a href="#">登录</a>
+     			<a href="#">注册</a>
+     		</div>
+        </div>
+        <div class="row nav">
+        	<nav class="col-lg-10 col-md-12 col-sm-12 col-xs-12 navbar navbar-default" role="navigation">
+        	    <div class="container-fluid">
+        	    	<div class="navbar-header">
+        	    	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+        	    	    	<span class="sr-only">切换导航</span>
+        	    	    	<span class="icon-bar"></span>
+        	    	    	<span class="icon-bar"></span>
+        	    	    	<span class="icon-bar"></span>
+        	    	    </button>
+        	    	</div>
+        	    	<div class="collapse navbar-collapse" id="example-navbar-collapse">
+        		        <ul class="nav navbar-nav navbar-right">
+        			        <li><a style="border-bottom: 3px solid white" href="首页2.html">首页</a></li>
+        			        <li><a href="职位列表2.html">职业</a></li>
+        			        <li><a href="#">推荐</a></li>
+        			        <li><a href="战略合作企业2.html">关于</a></li> 			        
+        		        </ul>
+        		    </div>    
+        		</div>
+        	</nav>
+        </div>
+    </div>
+</header>
+<!--轮播-->        
+<div id="myCarousel" class=" carousel slide">
+    <!-- 轮播（Carousel）指标 -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>   
+    <!-- 轮播（Carousel）项目 -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="imge\bigbg.png" alt="First slide">
+        </div>
+        <div class="item">
+            <img src="imge\bigbg.png" alt="Second slide">
+        </div>
+        <div class="item">
+            <img src="imge\bigbg.png" alt="Third slide">
+        </div>
+    </div>
+    <!-- 轮播（Carousel）导航 -->
+    <a class="carousel-control left" href="#myCarousel" 
+        data-slide="prev"></a>
+    <a class="carousel-control right" href="#myCarousel" 
+        data-slide="next"></a>
+</div>
+<div class="container-fluid content">
+    <!--第一行-->
+	<div class="row first">
+		<div class="col-lg-2 col-md-0 col-sm-0 col-xs-0"></div>
+		<div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+		    <img src="imge\rocket.png">
+            <h5>高效</h5>
+            <p class="small">将五年到七年的成长时间，缩短到一年到三年</p> 
+        </div>    
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+            <img src="imge\archive.png">
+            <h5>规范</h5>
+            <p class="small">标准的实战教程，不会走弯路</p>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-12">
+            <img src="imge\person.png">
+            <h5>人脉</h5>
+            <p class="small">同伴好友，同院学长，技术大师，入学就混入职脉圈，为以后铺平通路。</p>
+        </div>
+        <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 menber"><!--第一行的右边-->
+            <div>
+                <p class="glyphicon glyphicon-user small"> 12400</p>
+                <p class="small">累计在线学习人数</p>
+            </div>
+            <div>
+                <p class="glyphicon glyphicon-user small"> 12400</p>
+                <p class="small">学员已经找到满意工作</p>
+            </div>
+        </div>
+	</div>
+	<!--第二行-->
+	<div class="row">
+		<h5 class="h5">如何学习</h5>
+	</div>
+	<div class="row second">
+		<!--第一行-->
+		<div class="col-lg-2 col-md-0 col-sm-0 col-xs-0">
+		</div>
+		<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+			<h5>1</h5>
+	        <p class="small one">匹配你现在的个人情况寻找适合自己的岗位</p>
+			<img src="imge\箭头.png">
+		</div>
+		<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+			<h5>2</h5>
+			<p class="small">了解职业前景薪金待遇、竞争压力等</p>
+			<img src="imge\箭头.png">
+		</div>
+		<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+			<h5>3</h5>
+			<p class="small">掌握行业内顶级技能</p>
+			<img src="imge\箭头.png">
+		</div>
+		<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+			<h5>4</h5>
+			<p class="small">查看职业目标任务</p>
+			<img src="imge\箭头.png">
+		</div>
+	</div>	
+		<!--第二行-->
+	<div class="row second">	
+		<div class="col-lg-2 col-md-0 col-sm-0 col-xs-0"></div>
+		<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+			<h5>5</h5>
+			<p class="small">参考学习资源，掌握技能点，逐个完成任务</p>
+			<img src="imge\箭头.png">
+		</div>
+		<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+			<h5>6</h5>
+			<p class="small">加入班级，和小伙伴们互相互助，一块学习</p>
+			<img src="imge\箭头.png">
+		</div>
+		<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+			<h5>7</h5>
+			<p class="small">选择导师，一路引导，加速自己成长</p>
+			<img src="imge\箭头.png">
+		</div>
+		<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+			<h5>8</h5>
+			<p class="small">完成职业技能，升级业界大牛</p>
+			<img src="imge\箭头.png">
+		</div>
+	</div>
+</div> 
+<h5 class="h5">优秀学员展示</h5>
+    <div id="myCarousel" class="row carousel slide third">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="con">
+                    <p class="col-lg-2 col-md-0 col-sm-0 col col-xs-0"></p>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                      <div>
+                        <img src="imge\Avatar.png">
+                        <h5>技术顾问：罗大佑</h5>
+                        <p class="small">百度技术总监：互联网基础服务领域，从事虚拟主机、与服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+                      </div>  
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                       <div>
+                        <img src="imge\Avatar1.png">
+                        <h5>技术顾问：罗大佑</h5>
+                        <p class="small">百度技术总监：互联网基础服务领域，从事虚拟主机、与服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+                       </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                       <div>
+                        <img src="imge\Avatar2.png">
+                        <h5>技术顾问：罗大佑</h5>
+                        <p class="small">百度技术总监：互联网基础服务领域，从事虚拟主机、与服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
+                      <div>
+                        <img src="imge\Avatar3.png">
+                        <h5>技术顾问：罗大佑</h5>
+                        <p class="small">百度技术总监：互联网基础服务领域，从事虚拟主机、与服务器、域名。曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+                      </div>  
+                    </div>
+                </div>
+            </div>    
+         </div>  
+        </div>
+    </div>
+</div>
+<h5 class="h5" style="margin-top: 10%">战略合作企业</h5>
+<div class="container-fluid">
+    <div class="row forth">
+     	<div class="col-lg-2 col-md-0 col-sm-0 col-xs-0"></div>
+	    <div class="col-lg-9 col- md-12 col-sm-12 col-xs-12">
+	        <img src="imge\阿里巴巴.png"><img src="imge\金山云.png"><img class="active" src="imge\环信.png"><img src="imge\容联.png"><img src="imge\七牛云.png">
+		</div>
+	</div>
+	<div class="row fifth">
+	  	<h5 class="h5 col-lg-12 col-md-12 col-sm-12 col-xs-12">友情链接</h5>
+		<div class="col-lg-2 col-md-0 col-sm-0 col-xs-0"></div>
+        <div class="col-lg-4 col-md-6 col-xs-6">
+            <div>
+                <a href="#">·手机软件</a>
+                <a href="#">·手机软件</a>
+            </div>
+            <div>
+                <a href="#">·教师招聘</a>
+                <a href="#">·教师招聘</a>
+            </div>
+            <div>
+                <a href="#">·找工作</a>    
+                <a href="#">·找工作</a>
+            </div>
+            <div>
+                <a href="#">·教师招聘</a>
+                <a href="#">·教师招聘</a>
+            </div>
+            <div>    
+                <a href="#">·找工作</a>
+                <a href="#">·找工作</a>
+            </div>
+        </div>    
+        <div class="col-lg-4 col-md-6 col-xs-6">     
+            <div>
+                <a href="#">·手机软件</a>    
+                <a href="#">·手机软件</a>
+            </div>   
+            <div> 
+                <a href="#">·教师招聘</a>   
+                <a href="#">·教师招聘</a>
+            </div>
+            <div> 
+                <a href="#">·手机软件</a>   
+                <a href="#">·手机软件</a>
+            </div>
+            <div>          
+                <a href="#">·手机软件</a>
+                <a href="#">·手机软件</a>
+            </div>
+            <div>    
+                <a href="#">·找工作</a>
+                <a href="#">·找工作</a>
+            </div>    
+        </div>
+    </div>
+    <footer class="row">
+        <div class="col-lg-2 col-md-0 col-sm-0 col-xs-0"></div>
+        <div class="col-lg-7 col-md-10 col-sm-12 col-xs-12">
+	        <div class="container">
+	          	<div class="row">
+			        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			            <a href="#">技能树-改变你我</a>
+			        </div>
+			        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			            <a href="#">旗下网站</a>
+			        </div>
+				</div>
+	        	<div class="row">
+			        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		                <a class="line" href="#">关于我们</a> |
+		                <a class="line" href="#">联系我们</a>
+		                | <a href="#">友情链接</a>
+		            </div>
+		            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		                <div>		                	
+			                <a href="#">草船云孵化器</a>
+			                <a href="#">最强it特训营</a>
+		                </div>
+		                <div>
+		   	   	            <a href="#">葡萄藤轻游戏</a>
+		                    <a class="double" href="#">桌游精灵</a>
+		                </div>
+         		    </div>
+	          	</div>
+	        </div>
+	    </div>    
+        <div class="co-lg-1 col-md-2 col-sm-12 col-xs-12 code">    
+            <h5>微信公众平台</h5>
+            <img src="imge\code.png">
+        </div> 
+      	<p class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Copyright@2015技能树 www.jishu.com All Right Reserved |京ICP备13005880号</p>
+    </footer>   
+</div>
+</body>
+</html>

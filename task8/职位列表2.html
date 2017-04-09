@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>职位列表</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=no">
+    <link rel="shortcut icon" href="imge/修真院.ico">
+    <link rel="stylesheet" type="text/css" href="screen">
+    <link rel="stylesheet" type="text/css" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+      <!-- 注意： 如果通过 file://入Respond.js,文件，则该文件无法起效果 -->
+      <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+  	<style type="text/css">
+    /*--nomal--*/
+    body{font-family: '黑体';background-color:#fafafa;}
+    p{margin: 0px 0 4px}
+    .row{margin: 0}
+	/*--header--*/	
+    a:hover{text-decoration: none;}
+    header .white{padding: 3px 0;color: #29b078;background-color: white}
+    header .white a{float: right;margin-right: 2%;}
+    @media (max-width: 768px){header img{width: 0}.row .white{color: white}}
+    @media (max-width: 1200px){.contenth{width: 95%;margin-left: 2%;}header .white p{margin-left: 2%}}
+    @media (max-width: 600px){.contenth{width: 64%;margin-left: 18%}}
+    header .navbar-default{background-color: #29b078;border:none;}
+    header .navbar-default .navbar-nav>li>a{color: white;border-bottom: 3px solid #29b078}
+    header .navbar-default .navbar-nav>li>a:hover{color: white;border-bottom: 3px solid white}
+    .nav{background-color: #29b078;}
+    header .navbar{margin:0;}
+    .container-fluid{padding: 0;}
+    .xs{position: absolute;top: 8px;z-index: -1;}
+    .xs a{color: #29b078}
+    @media (max-width: 786px){.xs{z-index: 1}}
+	.path,.sorth{padding: 15px 0;font-size: 1.5rem;}
+    .path{border-bottom: 1px solid #d0d6d9}
+    .sorth{border-bottom: 1px solid #edf1f2;}
+    .now,.now:hover{color:#29b078}
+    .past,.past:hover{color: black}
+    .sorth h5{color: #999999 } 
+    .all,.all:hover{color: white;background-color: #29b078}
+    .sort{color: black;margin-right: 2%;}
+    .sort:hover{color: black}
+    .contenth .col-lg-8{padding: 0}  
+    .content{width: 64%;margin-left: 18%;margin-bottom: 100px;}
+    .head{font-weight: bolder;padding-bottom: 25px;border-bottom: 1px solid #d0d6d9}
+    .table,.hover{width: 270px;height: 300px;border:1px solid #edf1f2;margin-left: 1px;box-shadow: 0px 0px 3px #e2e2e2;}
+    .table{background-color: white;table-layout: fixed;}
+    .portrait{display: flex;flex-direction: row;justify-content: space-around;margin-bottom: -5px;}
+    .portrait img{width: 95px;height: 95px;}
+    .portrait div{width:145px;margin-left: 5px;word-break: break-all;}
+    .portrait h5{font-weight: bold;}
+    .table p{margin: 0;padding: 0;height:0;font-size: 0.9rem;}
+    .table .big{margin-right: -50px;}
+    .black{color: black}
+    .red{color: red}
+    .left{margin-left: 10px;margin-right: 50px;}
+    .right{float: right;}
+    .table>tbody>tr>td{border: 1px solid  #ddd}
+    .big{text-align: center;position: relative;top: 20px; width: 80%;}
+    .hover{color: white;background-color: rgba(61,61,61,0.5);}
+    .hover h5{text-align: center;}
+    .hover div{width: 80%;margin-top: 50px;margin-left: 10%;font-size: 1.1rem;}
+    .bigger{display: flex;flex-direction: row;margin-right: 28px;}
+    @media (max-width: 1200px){.Big{width: 100%}}
+    @media (max-width: 600px){.Big{justify-content: center;}}
+    @media (max-width: 320px){.contenth{width: 93%;margin-left: 3%;}}
+    .hover{margin-left: -270px;opacity: 0;}
+    .bigger:hover .hover{opacity: 1}
+    .Big{display: flex;flex-wrap: wrap;margin-top: 40px;}
+    .img img{width: 10px;margin-left: 5px;margin-top: -3px;}
+     /*--footer--*/
+    footer{background-color: #26a26f;color: white}
+    footer a{color: white;border-bottom: 1px solid #26a26f}
+    footer a:hover{color: white}
+    footer .row{padding-top:  20px;}
+    footer .col-lg-7,footer .container{padding: 0}
+    .container .row{margin: 10px 0 0 0;}
+    footer p{font-size: 1rem;margin: 0;text-align: center;padding-top: 10px;}
+    @media (max-width: 768px){.code{text-align: center;}} 
+    .code img{width: 83px;}
+    .double div{padding-bottom: 10px;}
+    .container{width: 100%;}
+    @media (max-width: 600px){footer{text-align: center;}}
+    </style>
+
+</head>
+<body>
+<!--页眉-->
+<header class="container-fluid">
+	<div class="row white">
+		    <div class="col-lg-2 col-md-0 col-sm-0 col-xs-0"></div>
+		    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 white">    
+                <p>客服热线：010-594-78634
+		        <span>
+			        <a class="right" href="#"><img src="imge\sina.png"></a>
+		            <a href="#"><img src="imge\qq.png"></a>
+			        <a  href="#"><img src="imge\wechat.png"></a>
+		        </span></p>
+     		</div>
+     		<div class="col-lg-0 col-md-0 col-sm-0 col-xs-12 xs">
+     			<a href="#">登录</a>
+     			<a href="#">注册</a>
+     		</div>
+    </div>
+    <div class="row nav">
+        	<nav class="col-lg-10 col-md-12 col-sm-12 col-xs-12 navbar navbar-default" role="navigation">
+        	    <div class="container-fluid">
+        	    	<div class="navbar-header">
+        	    	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+        	    	    	<span class="sr-only">切换导航</span>
+        	    	    	<span class="icon-bar"></span>
+        	    	    	<span class="icon-bar"></span>
+        	    	    	<span class="icon-bar"></span>
+        	    	    </button>
+        	    	</div>
+        	    	<div class="collapse navbar-collapse" id="example-navbar-collapse">
+        		        <ul class="nav navbar-nav navbar-right">
+        			        <li><a  href="首页2.html">首页</a></li>
+        			        <li><a  style="border-bottom: 3px solid white" href="职位列表2.html">职业</a></li>
+        			        <li><a href="#">推荐</a></li>
+        			        <li><a href="战略合作企业2.html">关于</a></li> 			        
+        		        </ul>
+        		    </div>    
+        		</div>
+        	</nav>
+    </div>
+</header>
+<div class="container-fluid contenth">    
+    <div class="row">
+        <div class="col-lg-2 col-md-0 col-sm-0 col-xs-0 "></div>
+        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 ">
+            <div class="path">
+                <a class="past" href="首页2.html">首页</a>
+                >
+                <a class="now" href="职位列表2.html">职业</a>
+            </div>
+            <div class="sorth">
+                <h5>方向:<span>
+                <a class="all" href="#">全部</a>
+                <a class="sort" href="#">前端开发</a>
+                <a class="sort" href="#">后端开发</a>
+                <a class="sort" href="#">移动开发</a>
+                <a class="sort" href="#">整站开发</a>
+                <a class="sort" href="#">运营维护</a></span>
+                </h5>
+            </div>
+            <div class="tableh">
+                <h5 class="head">前端开发方向</h5>
+                <div class="Big">
+                        <div class="bigger">
+                            <div>
+                                <table class="table" >
+                                  <tbody>
+                                        <tr>
+                                           <td  colspan="8" >
+                                               <div class="portrait">
+                                                    <img src="imge\portrait.png">
+                                                    <div>
+                                                        <h5>Web前端工程师</h5>
+                                                        <p>Web前端开发工程师，主要职责是利用(X)HTML/CSS/JavaScript/flash等各种Web技术进行产品的开发。</p>
+                                                    </div>    
+                                                </div>  
+                                            </td>
+                                            </tr>
+                                            <tr class="img">
+                                                <td colspan="4">
+                                                    <p class="grey">门槛<span>
+                                                    <img src="imge/star.png"></span>
+                                                    </p>
+                                                </td>
+                                                <td colspan="4">
+                                                    <p class="grey">难易程度
+                                                    <span><img src="imge/star.png">
+                                                    <img src="imge/star.png">
+                                                     </span></p>   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <td colspan="4">
+                                               <p class="grey">成长周期 <span class="red"> 1-3</span><span class="black">年</span></p>
+                                            </td>
+                                            <td colspan="4">
+                                                <p class="grey">稀缺程度 
+                                                <span class="red"> 345<span class="black">家公司需要</span>
+                                                </span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" colspan="3">
+                                                <p class="grey"> 薪酬待遇</p>
+                                            </td>
+                                            <td colspan="5">
+                                                <p>0-1年</p>
+                                                <p class="right">5k-10k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>1-3年</p><p class="right">10k-20k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>3年以上</p><p class="right">20k-50k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p style="font-size: 1rem;font-weight: bold">有<span class="red">286</span><span>人在学习</span></p>                     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p class="small grey">提示：在你学习之前你应该已经掌握xxxx、xxxx、xx等语言基础</p>
+                                            </td>                   
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                            </div>
+                            <div class="hover">
+                                <div>
+                                    <h5>iOS工程师</h5>
+                                    <p><span>&nbsp;</span>&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属 于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。</p>
+                                </div> 
+                            </div>       
+                        </div>
+                        <div class="bigger">
+                            <div>
+                                <table class="table" >
+                                  <tbody>
+                                        <tr>
+                                           <td  colspan="8" >
+                                               <div class="portrait">
+                                                    <img src="imge\portrait.png">
+                                                    <div>
+                                                        <h5>Web前端工程师</h5>
+                                                        <p>Web前端开发工程师，主要职责是利用(X)HTML/CSS/JavaScript/flash等各种Web技术进行产品的开发。</p>
+                                                    </div>    
+                                                </div>  
+                                            </td>
+                                            </tr>
+                                            <tr class="img">
+                                                <td colspan="4">
+                                                    <p class="grey">门槛<span>
+                                                    <img src="imge/star.png"></span>
+                                                    </p>
+                                                </td>
+                                                <td colspan="4">
+                                                    <p class="grey">难易程度
+                                                    <span><img src="imge/star.png">
+                                                    <img src="imge/star.png">
+                                                     </span></p>   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <td colspan="4">
+                                               <p class="grey">成长周期 <span class="red"> 1-3</span><span class="black">年</span></p>
+                                            </td>
+                                            <td colspan="4">
+                                                <p class="grey">稀缺程度 
+                                                <span class="red"> 345<span class="black">家公司需要</span>
+                                                </span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" colspan="3">
+                                                <p class="grey"> 薪酬待遇</p>
+                                            </td>
+                                            <td colspan="5">
+                                                <p>0-1年</p>
+                                                <p class="right">5k-10k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>1-3年</p><p class="right">10k-20k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>3年以上</p><p class="right">20k-50k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p style="font-size: 1rem;font-weight: bold">有<span class="red">286</span><span>人在学习</span></p>                     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p class="small grey">提示：在你学习之前你应该已经掌握xxxx、xxxx、xx等语言基础</p>
+                                            </td>                   
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                            </div>
+                            <div class="hover">
+                                <div>
+                                    <h5>iOS工程师</h5>
+                                    <p><span>&nbsp;</span>&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属 于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。</p>
+                                </div> 
+                            </div>       
+                        </div>
+                        <div class="bigger">
+                            <div>
+                                <table class="table" >
+                                  <tbody>
+                                        <tr>
+                                           <td  colspan="8" >
+                                               <div class="portrait">
+                                                    <img src="imge\portrait.png">
+                                                    <div>
+                                                        <h5>Web前端工程师</h5>
+                                                        <p>Web前端开发工程师，主要职责是利用(X)HTML/CSS/JavaScript/flash等各种Web技术进行产品的开发。</p>
+                                                    </div>    
+                                                </div>  
+                                            </td>
+                                            </tr>
+                                            <tr class="img">
+                                                <td colspan="4">
+                                                    <p class="grey">门槛<span>
+                                                    <img src="imge/star.png"></span>
+                                                    </p>
+                                                </td>
+                                                <td colspan="4">
+                                                    <p class="grey">难易程度
+                                                    <span><img src="imge/star.png">
+                                                    <img src="imge/star.png">
+                                                     </span></p>   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <td colspan="4">
+                                               <p class="grey">成长周期 <span class="red"> 1-3</span><span class="black">年</span></p>
+                                            </td>
+                                            <td colspan="4">
+                                                <p class="grey">稀缺程度 
+                                                <span class="red"> 345<span class="black">家公司需要</span>
+                                                </span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" colspan="3">
+                                                <p class="grey"> 薪酬待遇</p>
+                                            </td>
+                                            <td colspan="5">
+                                                <p>0-1年</p>
+                                                <p class="right">5k-10k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>1-3年</p><p class="right">10k-20k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>3年以上</p><p class="right">20k-50k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p style="font-size: 1rem;font-weight: bold">有<span class="red">286</span><span>人在学习</span></p>                     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p class="small grey">提示：在你学习之前你应该已经掌握xxxx、xxxx、xx等语言基础</p>
+                                            </td>                   
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                            </div>
+                            <div class="hover">
+                                <div>
+                                    <h5>iOS工程师</h5>
+                                    <p><span>&nbsp;</span>&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属 于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。</p>
+                                </div> 
+                            </div>       
+                        </div>
+                </div>  
+                <h5 class="head">后端开发方向</h5> 
+                <div class="Big">
+                    <div class="bigger">
+                            <div>
+                                <table class="table" >
+                                  <tbody>
+                                        <tr>
+                                           <td  colspan="8" >
+                                               <div class="portrait">
+                                                    <img src="imge\portrait.png">
+                                                    <div>
+                                                        <h5>Web前端工程师</h5>
+                                                        <p>Web前端开发工程师，主要职责是利用(X)HTML/CSS/JavaScript/flash等各种Web技术进行产品的开发。</p>
+                                                    </div>    
+                                                </div>  
+                                            </td>
+                                            </tr>
+                                            <tr class="img">
+                                                <td colspan="4">
+                                                    <p class="grey">门槛<span>
+                                                    <img src="imge/star.png"></span>
+                                                    </p>
+                                                </td>
+                                                <td colspan="4">
+                                                    <p class="grey">难易程度
+                                                    <span><img src="imge/star.png">
+                                                    <img src="imge/star.png">
+                                                     </span></p>   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <td colspan="4">
+                                               <p class="grey">成长周期 <span class="red"> 1-3</span><span class="black">年</span></p>
+                                            </td>
+                                            <td colspan="4">
+                                                <p class="grey">稀缺程度 
+                                                <span class="red"> 345<span class="black">家公司需要</span>
+                                                </span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" colspan="3">
+                                                <p class="grey"> 薪酬待遇</p>
+                                            </td>
+                                            <td colspan="5">
+                                                <p>0-1年</p>
+                                                <p class="right">5k-10k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>1-3年</p><p class="right">10k-20k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>3年以上</p><p class="right">20k-50k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p style="font-size: 1rem;font-weight: bold">有<span class="red">286</span><span>人在学习</span></p>                     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p class="small grey">提示：在你学习之前你应该已经掌握xxxx、xxxx、xx等语言基础</p>
+                                            </td>                   
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                            </div>
+                            <div class="hover">
+                                <div>
+                                    <h5>iOS工程师</h5>
+                                    <p><span>&nbsp;</span>&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属 于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。</p>
+                                </div> 
+                            </div>       
+                    </div>
+                    <div class="bigger">
+                            <div>
+                                <table class="table" >
+                                  <tbody>
+                                        <tr>
+                                           <td  colspan="8" >
+                                               <div class="portrait">
+                                                    <img src="imge\portrait.png">
+                                                    <div>
+                                                        <h5>Web前端工程师</h5>
+                                                        <p>Web前端开发工程师，主要职责是利用(X)HTML/CSS/JavaScript/flash等各种Web技术进行产品的开发。</p>
+                                                    </div>    
+                                                </div>  
+                                            </td>
+                                            </tr>
+                                            <tr class="img">
+                                                <td colspan="4">
+                                                    <p class="grey">门槛<span>
+                                                    <img src="imge/star.png"></span>
+                                                    </p>
+                                                </td>
+                                                <td colspan="4">
+                                                    <p class="grey">难易程度
+                                                    <span><img src="imge/star.png">
+                                                    <img src="imge/star.png">
+                                                     </span></p>   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <td colspan="4">
+                                               <p class="grey">成长周期 <span class="red"> 1-3</span><span class="black">年</span></p>
+                                            </td>
+                                            <td colspan="4">
+                                                <p class="grey">稀缺程度 
+                                                <span class="red"> 345<span class="black">家公司需要</span>
+                                                </span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" colspan="3">
+                                                <p class="grey"> 薪酬待遇</p>
+                                            </td>
+                                            <td colspan="5">
+                                                <p>0-1年</p>
+                                                <p class="right">5k-10k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>1-3年</p><p class="right">10k-20k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>3年以上</p><p class="right">20k-50k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p style="font-size: 1rem;font-weight: bold">有<span class="red">286</span><span>人在学习</span></p>                     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p class="small grey">提示：在你学习之前你应该已经掌握xxxx、xxxx、xx等语言基础</p>
+                                            </td>                   
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                            </div>
+                            <div class="hover">
+                                <div>
+                                    <h5>iOS工程师</h5>
+                                    <p><span>&nbsp;</span>&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属 于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。</p>
+                                </div> 
+                            </div>       
+                    </div>
+                    <div class="bigger">
+                            <div>
+                                <table class="table" >
+                                  <tbody>
+                                        <tr>
+                                           <td  colspan="8" >
+                                               <div class="portrait">
+                                                    <img src="imge\portrait.png">
+                                                    <div>
+                                                        <h5>Web前端工程师</h5>
+                                                        <p>Web前端开发工程师，主要职责是利用(X)HTML/CSS/JavaScript/flash等各种Web技术进行产品的开发。</p>
+                                                    </div>    
+                                                </div>  
+                                            </td>
+                                            </tr>
+                                            <tr class="img">
+                                                <td colspan="4">
+                                                    <p class="grey">门槛<span>
+                                                    <img src="imge/star.png"></span>
+                                                    </p>
+                                                </td>
+                                                <td colspan="4">
+                                                    <p class="grey">难易程度
+                                                    <span><img src="imge/star.png">
+                                                    <img src="imge/star.png">
+                                                     </span></p>   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <td colspan="4">
+                                               <p class="grey">成长周期 <span class="red"> 1-3</span><span class="black">年</span></p>
+                                            </td>
+                                            <td colspan="4">
+                                                <p class="grey">稀缺程度 
+                                                <span class="red"> 345<span class="black">家公司需要</span>
+                                                </span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" colspan="3">
+                                                <p class="grey"> 薪酬待遇</p>
+                                            </td>
+                                            <td colspan="5">
+                                                <p>0-1年</p>
+                                                <p class="right">5k-10k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>1-3年</p><p class="right">10k-20k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>3年以上</p><p class="right">20k-50k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p style="font-size: 1rem;font-weight: bold">有<span class="red">286</span><span>人在学习</span></p>                     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p class="small grey">提示：在你学习之前你应该已经掌握xxxx、xxxx、xx等语言基础</p>
+                                            </td>                   
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                            </div>
+                            <div class="hover">
+                                <div>
+                                    <h5>iOS工程师</h5>
+                                    <p><span>&nbsp;</span>&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属 于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。</p>
+                                </div> 
+                            </div>       
+                    </div>
+                    <div class="bigger">
+                            <div>
+                                <table class="table" >
+                                  <tbody>
+                                        <tr>
+                                           <td  colspan="8" >
+                                               <div class="portrait">
+                                                    <img src="imge\portrait.png">
+                                                    <div>
+                                                        <h5>Web前端工程师</h5>
+                                                        <p>Web前端开发工程师，主要职责是利用(X)HTML/CSS/JavaScript/flash等各种Web技术进行产品的开发。</p>
+                                                    </div>    
+                                                </div>  
+                                            </td>
+                                            </tr>
+                                            <tr class="img">
+                                                <td colspan="4">
+                                                    <p class="grey">门槛<span>
+                                                    <img src="imge/star.png"></span>
+                                                    </p>
+                                                </td>
+                                                <td colspan="4">
+                                                    <p class="grey">难易程度
+                                                    <span><img src="imge/star.png">
+                                                    <img src="imge/star.png">
+                                                     </span></p>   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <td colspan="4">
+                                               <p class="grey">成长周期 <span class="red"> 1-3</span><span class="black">年</span></p>
+                                            </td>
+                                            <td colspan="4">
+                                                <p class="grey">稀缺程度 
+                                                <span class="red"> 345<span class="black">家公司需要</span>
+                                                </span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" colspan="3">
+                                                <p class="grey"> 薪酬待遇</p>
+                                            </td>
+                                            <td colspan="5">
+                                                <p>0-1年</p>
+                                                <p class="right">5k-10k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>1-3年</p><p class="right">10k-20k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>3年以上</p><p class="right">20k-50k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p style="font-size: 1rem;font-weight: bold">有<span class="red">286</span><span>人在学习</span></p>                     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p class="small grey">提示：在你学习之前你应该已经掌握xxxx、xxxx、xx等语言基础</p>
+                                            </td>                   
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                            </div>
+                            <div class="hover">
+                                <div>
+                                    <h5>iOS工程师</h5>
+                                    <p><span>&nbsp;</span>&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属 于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。</p>
+                                </div> 
+                            </div>       
+                    </div>
+                    <div class="bigger">
+                            <div>
+                                <table class="table" >
+                                  <tbody>
+                                        <tr>
+                                           <td  colspan="8" >
+                                               <div class="portrait">
+                                                    <img src="imge\portrait.png">
+                                                    <div>
+                                                        <h5>Web前端工程师</h5>
+                                                        <p>Web前端开发工程师，主要职责是利用(X)HTML/CSS/JavaScript/flash等各种Web技术进行产品的开发。</p>
+                                                    </div>    
+                                                </div>  
+                                            </td>
+                                            </tr>
+                                            <tr class="img">
+                                                <td colspan="4">
+                                                    <p class="grey">门槛<span>
+                                                    <img src="imge/star.png"></span>
+                                                    </p>
+                                                </td>
+                                                <td colspan="4">
+                                                    <p class="grey">难易程度
+                                                    <span><img src="imge/star.png">
+                                                    <img src="imge/star.png">
+                                                     </span></p>   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <td colspan="4">
+                                               <p class="grey">成长周期 <span class="red"> 1-3</span><span class="black">年</span></p>
+                                            </td>
+                                            <td colspan="4">
+                                                <p class="grey">稀缺程度 
+                                                <span class="red"> 345<span class="black">家公司需要</span>
+                                                </span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" colspan="3">
+                                                <p class="grey"> 薪酬待遇</p>
+                                            </td>
+                                            <td colspan="5">
+                                                <p>0-1年</p>
+                                                <p class="right">5k-10k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>1-3年</p><p class="right">10k-20k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>3年以上</p><p class="right">20k-50k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p style="font-size: 1rem;font-weight: bold">有<span class="red">286</span><span>人在学习</span></p>                     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p class="small grey">提示：在你学习之前你应该已经掌握xxxx、xxxx、xx等语言基础</p>
+                                            </td>                   
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                            </div>
+                            <div class="hover">
+                                <div>
+                                    <h5>iOS工程师</h5>
+                                    <p><span>&nbsp;</span>&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属 于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。</p>
+                                </div> 
+                            </div>       
+                    </div>
+                </div> 
+                <h5 class="head">运维开发方向</h5>
+                <div class="Big">
+                        <div class="bigger">
+                            <div>
+                                <table class="table" >
+                                  <tbody>
+                                        <tr>
+                                           <td  colspan="8" >
+                                               <div class="portrait">
+                                                    <img src="imge\portrait.png">
+                                                    <div>
+                                                        <h5>Web前端工程师</h5>
+                                                        <p>Web前端开发工程师，主要职责是利用(X)HTML/CSS/JavaScript/flash等各种Web技术进行产品的开发。</p>
+                                                    </div>    
+                                                </div>  
+                                            </td>
+                                            </tr>
+                                            <tr class="img">
+                                                <td colspan="4">
+                                                    <p class="grey">门槛<span>
+                                                    <img src="imge/star.png"></span>
+                                                    </p>
+                                                </td>
+                                                <td colspan="4">
+                                                    <p class="grey">难易程度
+                                                    <span><img src="imge/star.png">
+                                                    <img src="imge/star.png">
+                                                     </span></p>   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <td colspan="4">
+                                               <p class="grey">成长周期 <span class="red"> 1-3</span><span class="black">年</span></p>
+                                            </td>
+                                            <td colspan="4">
+                                                <p class="grey">稀缺程度 
+                                                <span class="red"> 345<span class="black">家公司需要</span>
+                                                </span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" colspan="3">
+                                                <p class="grey"> 薪酬待遇</p>
+                                            </td>
+                                            <td colspan="5">
+                                                <p>0-1年</p>
+                                                <p class="right">5k-10k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>1-3年</p><p class="right">10k-20k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>3年以上</p><p class="right">20k-50k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p style="font-size: 1rem;font-weight: bold">有<span class="red">286</span><span>人在学习</span></p>                     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p class="small grey">提示：在你学习之前你应该已经掌握xxxx、xxxx、xx等语言基础</p>
+                                            </td>                   
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                            </div>
+                            <div class="hover">
+                                <div>
+                                    <h5>iOS工程师</h5>
+                                    <p><span>&nbsp;</span>&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属 于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。</p>
+                                </div> 
+                            </div>       
+                        </div>
+                        <div class="bigger">
+                            <div>
+                                <table class="table" >
+                                  <tbody>
+                                        <tr>
+                                           <td  colspan="8" >
+                                               <div class="portrait">
+                                                    <img src="imge\portrait.png">
+                                                    <div>
+                                                        <h5>Web前端工程师</h5>
+                                                        <p>Web前端开发工程师，主要职责是利用(X)HTML/CSS/JavaScript/flash等各种Web技术进行产品的开发。</p>
+                                                    </div>    
+                                                </div>  
+                                            </td>
+                                            </tr>
+                                            <tr class="img">
+                                                <td colspan="4">
+                                                    <p class="grey">门槛<span>
+                                                    <img src="imge/star.png"></span>
+                                                    </p>
+                                                </td>
+                                                <td colspan="4">
+                                                    <p class="grey">难易程度
+                                                    <span><img src="imge/star.png">
+                                                    <img src="imge/star.png">
+                                                     </span></p>   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <td colspan="4">
+                                               <p class="grey">成长周期 <span class="red"> 1-3</span><span class="black">年</span></p>
+                                            </td>
+                                            <td colspan="4">
+                                                <p class="grey">稀缺程度 
+                                                <span class="red"> 345<span class="black">家公司需要</span>
+                                                </span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" colspan="3">
+                                                <p class="grey"> 薪酬待遇</p>
+                                            </td>
+                                            <td colspan="5">
+                                                <p>0-1年</p>
+                                                <p class="right">5k-10k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>1-3年</p><p class="right">10k-20k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>3年以上</p><p class="right">20k-50k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p style="font-size: 1rem;font-weight: bold">有<span class="red">286</span><span>人在学习</span></p>                     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p class="small grey">提示：在你学习之前你应该已经掌握xxxx、xxxx、xx等语言基础</p>
+                                            </td>                   
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                            </div>
+                            <div class="hover">
+                                <div>
+                                    <h5>iOS工程师</h5>
+                                    <p><span>&nbsp;</span>&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属 于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。</p>
+                                </div> 
+                            </div>       
+                        </div>
+                        <div class="bigger">
+                            <div>
+                                <table class="table" >
+                                  <tbody>
+                                        <tr>
+                                           <td  colspan="8" >
+                                               <div class="portrait">
+                                                    <img src="imge\portrait.png">
+                                                    <div>
+                                                        <h5>Web前端工程师</h5>
+                                                        <p>Web前端开发工程师，主要职责是利用(X)HTML/CSS/JavaScript/flash等各种Web技术进行产品的开发。</p>
+                                                    </div>    
+                                                </div>  
+                                            </td>
+                                            </tr>
+                                            <tr class="img">
+                                                <td colspan="4">
+                                                    <p class="grey">门槛<span>
+                                                    <img src="imge/star.png"></span>
+                                                    </p>
+                                                </td>
+                                                <td colspan="4">
+                                                    <p class="grey">难易程度
+                                                    <span><img src="imge/star.png">
+                                                    <img src="imge/star.png">
+                                                     </span></p>   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <td colspan="4">
+                                               <p class="grey">成长周期 <span class="red"> 1-3</span><span class="black">年</span></p>
+                                            </td>
+                                            <td colspan="4">
+                                                <p class="grey">稀缺程度 
+                                                <span class="red"> 345<span class="black">家公司需要</span>
+                                                </span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" colspan="3">
+                                                <p class="grey"> 薪酬待遇</p>
+                                            </td>
+                                            <td colspan="5">
+                                                <p>0-1年</p>
+                                                <p class="right">5k-10k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>1-3年</p><p class="right">10k-20k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>3年以上</p><p class="right">20k-50k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p style="font-size: 1rem;font-weight: bold">有<span class="red">286</span><span>人在学习</span></p>                     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p class="small grey">提示：在你学习之前你应该已经掌握xxxx、xxxx、xx等语言基础</p>
+                                            </td>                   
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                            </div>
+                            <div class="hover">
+                                <div>
+                                    <h5>iOS工程师</h5>
+                                    <p><span>&nbsp;</span>&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属 于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。</p>
+                                </div> 
+                            </div>       
+                        </div>
+                </div>
+                <h5 class="head">运维方向</h5>
+                <div class="Big">
+                    <div class="bigger">
+                            <div>
+                                <table class="table" >
+                                  <tbody>
+                                        <tr>
+                                           <td  colspan="8" >
+                                               <div class="portrait">
+                                                    <img src="imge\portrait.png">
+                                                    <div>
+                                                        <h5>Web前端工程师</h5>
+                                                        <p>Web前端开发工程师，主要职责是利用(X)HTML/CSS/JavaScript/flash等各种Web技术进行产品的开发。</p>
+                                                    </div>    
+                                                </div>  
+                                            </td>
+                                            </tr>
+                                            <tr class="img">
+                                                <td colspan="4">
+                                                    <p class="grey">门槛<span>
+                                                    <img src="imge/star.png"></span>
+                                                    </p>
+                                                </td>
+                                                <td colspan="4">
+                                                    <p class="grey">难易程度
+                                                    <span><img src="imge/star.png">
+                                                    <img src="imge/star.png">
+                                                     </span></p>   
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <td colspan="4">
+                                               <p class="grey">成长周期 <span class="red"> 1-3</span><span class="black">年</span></p>
+                                            </td>
+                                            <td colspan="4">
+                                                <p class="grey">稀缺程度 
+                                                <span class="red"> 345<span class="black">家公司需要</span>
+                                                </span></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" colspan="3">
+                                                <p class="grey"> 薪酬待遇</p>
+                                            </td>
+                                            <td colspan="5">
+                                                <p>0-1年</p>
+                                                <p class="right">5k-10k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>1-3年</p><p class="right">10k-20k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <p>3年以上</p><p class="right">20k-50k/月</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p style="font-size: 1rem;font-weight: bold">有<span class="red">286</span><span>人在学习</span></p>                     
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">
+                                                <p class="small grey">提示：在你学习之前你应该已经掌握xxxx、xxxx、xx等语言基础</p>
+                                            </td>                   
+                                        </tr>
+                                    </tbody>
+                                </table>    
+                            </div>
+                            <div class="hover">
+                                <div>
+                                    <h5>iOS工程师</h5>
+                                    <p><span>&nbsp;</span>&nbsp;iOS是由苹果公司开发的移动操作统，iOS与苹果的Mac OS X操作系统一样，也是以Darwin为基础的，因此同样属 于类Unix的商业操作系统。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。国内iOS开发起步相对较晚，人才培养机制更是远远跟不上市场发展速度。有限的iOS开发人才成了国内企业必争的资源。</p>
+                                </div> 
+                            </div>       
+                    </div>                       
+                </div>  
+            </div>
+        </div>   
+    </div>
+</div>
+<footer class="container-fluid">
+    <divr class="row">
+        <div class="col-lg-2 col-md-0 col-sm-0 col-xs-0"></div>
+        <div class="col-lg-7 col-md-10 col-sm-12 col-xs-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <a href="#">技能树-改变你我</a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <a href="#">旗下网站</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                        <a class="line" href="#">关于我们</a> |
+                        <a class="line" href="#">联系我们</a>
+                        | <a href="#">友情链接</a>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 double">
+                        <div>                           
+                            <a href="#">草船云孵化器</a>
+                            <a href="#">最强it特训营</a>
+                        </div>
+                        <div>
+                            <a href="#">葡萄藤轻游戏</a>
+                            <a class="double" href="#">桌游精灵</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="co-lg-1 col-md-2 col-sm-12 col-xs-12 code">    
+            <h5>微信公众平台</h5>
+            <img src="imge\code.png">
+        </div> 
+    </div>
+
+        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Copyright@2015技能树 www.jishu.com All Right Reserved |京ICP备13005880号</p>
+</footer>
+
+</body>
+</html>
