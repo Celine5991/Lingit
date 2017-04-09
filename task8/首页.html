@@ -3,7 +3,7 @@
 <head>
 	<title>首页</title>
 	<meta charset="utf-8">
-	<meta name="veiwport" content="width=device-width,initail-scale=1.0,maximun-scale=1.0,user-scalabe=no"/>
+	<meta name="veiwport" content="width=device-width,initial-scale=1.0,maximun-scale=1.0,user-scalabe=no"/>
 	<link rel="stylesheet" type="text/css" href="screen">
     <link rel="stylesheet" type="text/css" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
@@ -27,7 +27,7 @@
   .Top img{margin-left: 8px;}
   /*--navigaiton--*/
   .navigation{background-color: #29b078;
-    padding-top:20px;padding-bottom: 50px;}
+    padding-top:20px;padding-bottom: 49px;}
   .right{margin-right: 20%;}
   .navigation a{float: right;margin-left: 27px;padding-bottom: 19px;text-decoration: none;
     font-size: 2rem;}
@@ -50,23 +50,24 @@
   .point p{text-align: justify;}
   .point img{transform: scale(0.8,0.8);}
   .point .right{margin-right: 5%;}
-  .menber{width: 20%;display: flex;flex-direction: column;margin-left: 5%;padding-top: 50px;}
+  .menber{width: 20%;display: flex;flex-direction: column;
+   margin-left: 5%;padding-top: 50px;text-align:left;}
   .menber span{color: #26a26f;padding-bottom: 10px;}
   /*--second--*/
   .second{padding-bottom: 10px;}
-  .second .con{width: 112%;
-    background-image: url('imge/sprite.png');
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: bottom left;margin-left: -20px;
-    padding-right: }
+  .second .con{width: 112%;}
   div.row{display: flex;flex-direction: row;justify-content: space-between;width: 100%;margin:0;}
-  .con .top{margin-bottom: 84px;padding-top: 60px;}
-  .row p{width: 13%;font-family: '黑体';text-align: justify;}
+  .con .top{margin-bottom: 84px;margin-top: 60px;
+    background-image: url(imge/sprite1.png);}
+  .bottomm{background-image: url(imge/sprite2.png);}  
+  .bottomm,.con .top{background-size: 78%;
+    background-repeat: no-repeat;}
+  .row p{width: 13%;font-family: '黑体';text-align: justify;padding-bottom: 2%;margin-top: 1.5%}
   p.one{margin-left: -5rem;}
   p.two{margin-left: 1rem}
-  p.three{margin-left: 1rem;}
+  p.three{margin-left: rem;}
   p.four{width: 10%;}
+  @media screen and (width: 1024px){p.one{margin-left: -3rem;}.row p{margin-top: 5px}p.two{margin-left: 0} }
   /*--third--*/
   .third .con{display: flex;justify-content: space-between;}
   .third p{text-align: justify;margin: 10px 20px 20px 20px;}
@@ -87,23 +88,29 @@
     background-image: url('imge/战略合作.png');
     background-size:100%;background-repeat: no-repeat;}
   .forth .con div{width: 20%;}
+  @media screen and (width: 1024px){.forth .con div{height:101px;}}
   .middle{box-shadow: 0px 0px 3px #adadad}
   .forth .con div:hover{box-shadow: 0px 0px 3px #adadad}
   /*--footer--*/
   footer{width: 100%}
   footer .top{background-color: white;margin-bottom: 20px;padding-top: 10px;}
-  footer .top div{width: 70%;margin-left: 15%;display: flex;justify-content: space-between;flex-direction: row;margin-top: 10px;}
-  footer .top a{color: #999999;}
-  footer a:hover{text-decoration: underline;}
+  footer .top div{width: 70%;margin-left: 15%;
+    display: flex;justify-content: space-between;flex-direction: row;margin-top: 10px;}
+  footer .top a{color: #999999;border-bottom: 1px solid white}
+  footer .top a:hover{border-bottom: 1px solid #26a26f}
+  footer a:link{ text-decoration: none;}
+  footer .bottom a{border-bottom: 1px solid #26a26f}
+  footer .bottom a:hover{border-bottom: 1px solid white}
   .bottom{background-color: #26a26f;font-size: 105%;font-family: }
   .Big{display: flex;justify-content: space-between;text-align: left;
     width: 70%;margin-left: 15%;
     padding-top: 20px;padding-bottom: 20px;}
   .bottom .big{display: flex;flex-direction: column;justify-content: space-around;} 
   .bottom p{color: white;}
-  .bottom .right{border-right: 1px solid white;margin-right: 5px;}
+  .bottom .right{;margin-right: 1px;}
   .bottom .bottom{margin-top: -10px;}
   .bottom .midlle{margin-left: -20%;}
+  .bottom .big div a{padding-bottom: 10px;}
   </style>
 
 </head>
@@ -117,11 +124,11 @@
 	</span>
 </div>
 <div class="navigation"><!--导航-->
-    <a class="right" href="关于.html">关于</a>
-    <a href="职业.html">职业</a>
-    <a href="推荐.html">推荐</a>
-    <a href="首页.html">首页</a>
-</div>
+        <a class="right" href="关于.html">关于</a>
+        <a href="战略合作企业.html">推荐</a>
+        <a href="职位列表.html">职业</a>
+        <a href="首页.html">首页</a>
+    </div>
 <div id="myCarousel" class="carousel slide">
   <div class="carousel-inner">
     <div class="item active">
@@ -176,7 +183,7 @@
       <p class="small three">掌握行业内顶级技能</p>
       <p class="small four">查看职业目标任务</p>
     </div>
-    <div class="row">  
+    <div class="row bottomm">  
       <p class="small one">参考学习资源，掌握技能点，逐个完成任务</p>
       <p class="small two">加入班级，和小伙伴们互相互助，一块学习</p>
       <p class="small three">选择导师，一路引导，加速自己成长</p>
@@ -265,8 +272,8 @@
      <div class="big">
       <a href="#">技能树-改变你我</a>
       <div>
-        <a class="right" href="#">关于我们 </a>
-        <a class="right" href="#">联系我们 </a>
+        <a class="right" href="#">关于我们 |</a>
+        <a class="right" href="#">联系我们 |</a>
         <a href="#">合作企业</a>
       </div>
      </div>
@@ -287,7 +294,7 @@
      </div>
     </div>
     <p class="small">Copyright@2015技能树 www.jishu.com All Right Reserved |京ICP备13005880号</p>  
-</div>
+  </div>
 
   </div>
 </footer>
