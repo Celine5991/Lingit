@@ -1,0 +1,103 @@
+<style type="text/css">
+body{font-family: '黑体';white-space: nowrap}
+header,.white,.footer{background-color: #1d7ad9}
+.sign button,.sort button{border: none;}
+header p{float: left;color: white;padding-top: 10px;}
+@media (max-width: 320px){header p{font-size: 1px;color: #1d7ad9}}
+.sign{float: right;}
+.sign button,.sort button{width: 70px;height: 41px;padding: 0;margin-top: -1px;}	/*--col-0默认高度1px--*/
+.black,.sort button{background-color: white}
+.white,button.active{color: white}
+footer,.sort{background-color: #f9f9f9;}
+footer .more{display: flex;flex-direction: column}
+.code{align-items: flex-start;flex-direction: row;display: flex}
+.code img{width: 71px;}
+.sort{padding: 20px 0;}
+.sort button{margin-left: 2%;border-radius: 5px;border: none;box-shadow: 0px 0px 6px #e6e6e6}
+.sort div{display: flex;justify-content: space-between;}
+button.active{width: 60px;}
+footer{padding: 30px 0;color: #a0a0a0}
+@media (max-width: 767px){footer{padding-left: 30%;}}
+@media (max-width: 330px){footer{text-align: center;padding-left: 0}.code{flex-direction: column;}.code img{width: 60px;    margin-left: 36px}}
+.Grey{font-size: 1.3rem}
+.grey{font-size: 1.1rem}
+footer a,footer a:hover{color: #a0a0a0;text-decoration: none;margin-right: 10%;}
+.more div{margin-bottom: 10px;float: left}
+.code{float: right;margin-top: -51px;}
+.footer{text-align: center;color: white;font-size: 0.8rem;padding-top:5px; }
+.footer .left{text-align: right;padding-right: 5px;font-size: 0.9rem}
+.footer .right{text-align: left;padding-left: 5px;font-size: 0.9rem}
+@media (max-width: 993px){.footer .left,.footer .right{text-align: center;}}/*---!!!!----*/
+.guide,.guide div div{
+    display: flex;align-items: center;}
+.guide div div div{
+    height: 2px;
+    width:52px;background-color: #cccccc;
+}
+.guide h5{background-color:#cccccc }
+@media (max-width: 1024px) and (min-width: 768px) {.guide div div div{
+    width:61px;}}
+@media (max-width: 768px) and (min-width: 425px) {.guide div div div{
+    width:59px;}}
+@media (max-width: 425px) and (min-width: 320px){.guide div div div{
+    width:40px;}}
+@media (max-width: 320px) {.guide div div div{width:27px;}.more div{ margin-left: 13px;    width:100%;} }/**--!!!---*/
+.guide  h5{
+    border-radius: 26px;
+    width: 20px;padding: 2px 0;text-align: center;
+    color: white;}
+.guide p{text-align:  center;color:#cccccc}
+
+@media (max-width: 320px){.guide p{font-size: 1.2rem}}
+.guide .active div div,.active h5{
+    background-color: #ff7f02;}/*--!!!--*/
+.active p{color: #ff7f02;}
+h5.head{padding-left: 4px;border-left: 3px solid #1d7ad9;font-weight: bold;margin-top: 20px;}
+/*--table--*/
+.content .head{background-color: #f3f3f3;color: #7aa6e2;height: 45px;font-weight: bold;
+padding-top: 8px;border-radius: 10px 10px 0 0;}
+.content .head img{margin: 7px 10px; }
+.control{;display: flex;
+    padding-bottom:17px;
+    padding-top: 10px;}
+.controlh{padding: 10px 0;background-color: #fbfcff;
+    display: flex;justify-content: space-between;align-items: center;border-radius: 0 0 10px 10px;}
+
+@media (max-width: 320px){.controlh{padding-bottom: 40px;display: block;}.select{float: right}
+
+}
+select{width: 117px;
+    border: 1px solid #e8e8e8;
+    padding: 6px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("imge/more.png") no-repeat right;
+    color: #d3d3d3;}
+.select{
+    margin-right: 10px;}
+input.ruler{width: 60px}
+.ruler{display: flex;margin:0px 0 10px 0;}
+.ruler div{display: flex;flex-wrap: wrap;margin-top: -3px;}
+form{margin: 0 5px 0 -15px;}
+.ruler p{margin-right: 10px;}
+@media (max-width: 768px){.ruler{display: block;}.ruler div{margin: 5px 17px}}
+@media (max-width: 767px){.code{float: none;padding-right: 28px}}
+.rulers{padding-top: 17px}
+.cut .first{margin-left: 10px}
+div.next{text-align: center;}
+.checkbox-inline+.checkbox-inline{margin-left: 0}
+.next .next{background: #d9534f;
+    color: white;
+    font-size: 1.8rem;
+    width: 77px;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    margin:40px 0 20px  0;}
+.content label{font-weight: 100;margin:0 15px 0 10px;background-color: transparent}
+.control label{}
+.control,.ruler,.cut{margin-left: 15px}
+input[type=radio]{opacity:0.0;display:inline-block;height: 20px;}
+label.radio{background: url(imge/label.png) no-repeat;height: 20px;padding-left: 25px;margin-left: -7px;}
+input[type=radio].radio:checked + .radio{background: url(imge/checked.png) no-repeat;}
+
+</style>
